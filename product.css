@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
 }
 .section-1{
     
@@ -11,7 +12,7 @@
 .content-1{
     width: 100%;
     height: 100%;
-    background-image: url(./images/tea.jpg);
+    background-image: url(./images/interior-photo-cup-coffee-table-background.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -30,7 +31,7 @@
     color: green;
 }
 .sub-content p{
-    color: black;
+    color: white;
     font-size: 20px;
     text-align: center;
     line-height: 25px;
@@ -50,12 +51,23 @@
 }
 .section-2-right{
     width: 30%;
-    min-height: 100vh;
+    min-height: 50vh;
     height:600px;
-    background-color: red;
     position: sticky;
     top:0;
     right: 0
+}
+.section-2-right h1{
+    color: #198754;
+    padding: 30px;
+
+}
+.section-2-right ul li{
+    padding: 10px;
+    list-style: none;
+}
+.section-2-right ul li > *{
+    padding: 5px;
 }
 .sec-2-content-1{
     width: 100%;
