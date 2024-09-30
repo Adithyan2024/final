@@ -51,8 +51,8 @@ a {
   transition: 0.7s ease;
 }
 .logo {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   margin-left: 10px;
 }
 .dropdown {
@@ -103,10 +103,13 @@ a {
   transition: all 0.3s ease-in-out;
   background-color: black;
 }
-@media (max-width: 768px) {
+@media (max-width: 1054px) {
   .hamburger {
     display: block;
   }
+  /* .logo{
+    display: none;
+  } */
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -117,24 +120,28 @@ a {
     transform: translateY(-8px) rotate(-45deg);
   }
   .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
+    position:fixed;
+    left: -110%;
+    top: 115px;
     gap: 0;
     flex-direction: column;
     background-color: white;
-    width: 100%;
-    text-align: center;
+    width: 50%;
+    height: 80vh;
     transition: 0.3s;
   }
   .nav-item {
     margin: 16px 0;
   }
+  .dropdown li a:hover {
+    background-color: black;
+  }
   .nav-menu.active {
     left: 0;
   }
-}
 
+
+}
 .container-1 {
   height: 110vh;
   width: 100%;
