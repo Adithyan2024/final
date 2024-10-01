@@ -139,7 +139,25 @@ a {
   .nav-menu.active {
     left: 0;
   }
-
+  .nav-menu {
+    position:fixed;
+    left: -110%;
+    top: 115px;
+    gap: 0;
+    flex-direction: column;
+    width: 50%;
+    height: 80vh;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .nav-item a{
+    color: black;
+    font-size: 20px;
+  }
+  .navbar{
+    background-color: white;
+  }
 
 }
 .container-1 {
