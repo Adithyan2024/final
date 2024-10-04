@@ -17,14 +17,35 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.getElementById('nav');
-
+    let lastScrollY=window.scrollY
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) { 
+  if (window.scrollY > 50 ) { 
     navbar.classList.add("lazy-nav")
   } else {
     navbar.classList.remove("lazy-nav")
   }
+  // if(window.scrollY>1000 ){
+  //   navbar.classList.remove("lazy-nav")
+  // }
 });
+
+  let lastScrollPosition = window.scrollY; // Get the initial scroll position
+
+  window.addEventListener('scroll', function() {
+    let currentScrollPosition = window.scrollY;
+    const navbar = document.getElementById('nav');
+    if (window.scrollY===50) { 
+      navbar.classList.add("lazy-nav")
+    }
+    if(window.scrollY===2000){
+      navbar.classList.remove("lazy-nav")
+    }
+   
+  
+    // Update last scroll position after every scroll
+    lastScrollPosition = currentScrollPosition;
+  });
+
 
   })
   

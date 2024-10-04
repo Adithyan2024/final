@@ -5,7 +5,6 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
 header {
   position: fixed;
   z-index: 100;
@@ -30,6 +29,12 @@ a {
   padding: 0 24px;
   background-color: transparent;
   transition: background-color 1s ease;
+}
+
+.nav-item a {
+  color: #214842;
+  text-decoration: none;
+  font-size: 16px;
 }
 .navbar.lazy-nav {
   background-color: white;
@@ -103,9 +108,6 @@ a {
   background-color: black;
 }
 @media (max-width: 1054px) {
-  header {
-    position: sticky;
-  }
   .hamburger {
     display: block;
   }
@@ -127,18 +129,13 @@ a {
     top: 115px;
     gap: 0;
     flex-direction: column;
+    background-color: white;
     width: 50%;
     height: 80vh;
     transition: 0.3s;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.3);
   }
   .nav-item {
     margin: 16px 0;
-  }
-  .nav-item a {
-    color: black;
-    font-size: 20px;
   }
   .dropdown li a:hover {
     background-color: black;
@@ -146,18 +143,15 @@ a {
   .nav-menu.active {
     left: 0;
   }
-  .navbar {
-    background-color: white;
-  }
 }
 .image {
   width: 100%;
-  height: 500px;
-  background-image: url(./images/cup-coffee-focus-with-cozy-room-background.jpg);
-  background-size: cover;
-  background-position: center;
 }
-
+.image img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
 .headingtext {
   padding: 30px 80px;
   font-size: 10px;
@@ -224,13 +218,38 @@ textarea {
   font-size: 14px;
 }
 
-#submit {
+.send-button {
   width: 200px;
   background-color: rgb(244, 205, 108);
   color: rgb(7, 7, 54);
   font-size: 15px;
   padding: 10px;
   cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+
+.company-loaction {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.company-loaction .iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60%;
+  padding-top: 56.25%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -260,4 +279,11 @@ textarea {
   margin-top: 30px;
   gap: 20px;
   font-size: 30px;
+}
+@media (max-width: 390px) {
+   .image img{
+    height: 300px;
+    width:390px;
+  } 
+ 
 }
